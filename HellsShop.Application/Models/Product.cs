@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HellsShop.Application.Models
 {
-    public class Product
+    public class Product : IDatabaseModel
     {
         public virtual long? Id { get; protected internal set; }
         public virtual string Name { get; protected internal set; }
