@@ -1,6 +1,6 @@
 ﻿namespace HellsShop.Application.Models
 {
-    public class Price
+    public class Price : IDatabaseModel
     {
         public virtual long? Id { get; protected internal set; }
         public virtual decimal Amount { get; protected internal set; }

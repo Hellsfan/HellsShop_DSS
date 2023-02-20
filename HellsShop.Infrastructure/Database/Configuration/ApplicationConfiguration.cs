@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using HellsShop.Application.Services.Interfaces;
+using HellsShop.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -28,6 +30,13 @@ namespace HellsShop.Infrastructure.Database.Configuration
                     e.Default(WarningBehavior.Log);
                 });
             });
+            return services;
+        }
+
+        public static IServiceCollection AddRepositories(this IServiceCollection services)
+        {
+            services.AddScoped<IProductRepository,ProductRepository>();
+            services.AddScoped<IPriceRepository,PriceRepository>();
             return services;
         }
 
