@@ -26,7 +26,7 @@ namespace HellsShop.Infrastructure.Database.Configuration
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlite("Data Source=HellDatabse.db", config =>
+                optionsBuilder.UseSqlite("Data Source=HellDatabase.db", config =>
                 {
                     config.MigrationsAssembly("HellsShop.Infrastructure");
                     config.MigrationsHistoryTable("migration_history", "dbo");

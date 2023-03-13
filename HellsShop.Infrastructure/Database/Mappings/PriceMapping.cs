@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HellsShop.Infrastructure.Database.Mappings
 {
-    internal class PriceMapping : IEntityTypeConfiguration<Price>
+    public sealed class PriceMapping : IEntityTypeConfiguration<Price>
     {
         public void Configure(EntityTypeBuilder<Price> builder)
         {

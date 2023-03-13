@@ -1,6 +1,6 @@
 ﻿namespace HellsShop.Application.Models
 {
-    public class ShoppingCartItem
+    public class ShoppingCartItem : IDatabaseModel
     {
         public virtual long? Id { get; protected internal set; }
         public virtual long? ProductId { get; protected internal set; }
